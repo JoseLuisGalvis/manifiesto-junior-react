@@ -1,0 +1,88 @@
+/*
+ * UBICACIÓN: /src/styles/animations.css
+ * PROPÓSITO: Separar estilos del código JavaScript (Separation of Concerns)
+ */
+
+.hover-card {
+  transition: all 0.3s ease;
+  transform: translateY(0);
+}
+
+.hover-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+.hover-card.selected {
+  transform: translateY(-3px);
+  box-shadow: 0 0.3rem 0.8rem rgba(0, 123, 255, 0.3) !important;
+  border: 2px solid #007bff;
+}
+
+.detail-view {
+  animation-duration: 0.6s;
+  animation-fill-mode: both;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideRight {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-down {
+  animation: slideDown 0.6s ease-out;
+}
+.animate-slide-left {
+  animation: slideLeft 0.6s ease-out;
+}
+.animate-slide-right {
+  animation: slideRight 0.6s ease-out;
+}
+.animate-slide-up {
+  animation: slideUp 0.6s ease-out;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+.transition-all {
+  transition: all 0.3s ease;
+}
